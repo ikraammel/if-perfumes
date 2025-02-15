@@ -25,9 +25,7 @@ const NavBar = () => {
               <a href="#parfums" id="openPopupBtn" className="hover:text-gray-200 flex items-center">
                 <i className="bx bxs-spray-can mr-2"></i> Parfums
               </a>
-              <a href="#contact" className="hover:text-gray-200 flex items-center">
-                <i className="bx bxs-phone mr-2"></i> Contact
-              </a>
+              
             </div>
 
             <div className="flex gap-4">

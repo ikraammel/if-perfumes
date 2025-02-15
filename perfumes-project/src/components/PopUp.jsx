@@ -23,7 +23,7 @@ const OpenPopupButton = () => {
     <div className="fixed bottom-4 right-4 flex justify-center items-center z-50">
       <button
         onClick={openPopup}
-        className="bg-pink-500 text-white rounded-full p-4 shadow-lg hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-400"
+        className="bg-pink-500 cursor-pointer text-white rounded-full p-4 shadow-lg hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-400"
       >
         {/* Icône loupe avec FontAwesome */}
         <FontAwesomeIcon icon={faSearch} size="lg" />
