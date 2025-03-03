@@ -20,7 +20,7 @@ const Footer = () => {
           
           {/* Social Media Section */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Suivez-nous</h3>
+            <h3 className="text-xl font-semibold mb-4">Follow us</h3>
             <div className="flex justify-center md:justify-start gap-4 text-2xl">
               <a href="#" className="hover:text-gray-400"><i className='bx bxl-facebook'></i></a>
               <a href="#" className="hover:text-gray-400"><i className='bx bxl-instagram'></i></a>
