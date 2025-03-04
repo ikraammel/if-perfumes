@@ -13,7 +13,7 @@ const OpenPopupButton = () => {
 
     // Ouvrir la fenêtre popup avec les dimensions et options spécifiées
     window.open(
-      'https://ifperfumes.streamlit.app/',  // L'URL de ton application Streamlit
+      'https://perfumes-recommandation.streamlit.app/',  // L'URL de ton application Streamlit
       'PopupParfum', 
       `width=${popupWidth},height=${popupHeight},top=${top},left=${left},resizable=yes,scrollbars=yes`
     );

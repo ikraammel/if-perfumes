@@ -4,6 +4,8 @@ import Aprops from './components/Aprops'
 import Parfums from './components/Parfums'
 import PopUp from './components/PopUp'
 import Footer from './components/Footer'
+import PopUpContact from './components/PopUpContact'
+import PopUpInscription from './components/PopUpInscription'
 const App = () => {
   return (
     <div>
@@ -12,6 +14,9 @@ const App = () => {
       <Parfums/>
       <PopUp/>
       <Footer/>
+      <PopUpContact/>
+      <PopUpInscription/>
+
     </div>
   )
 }
