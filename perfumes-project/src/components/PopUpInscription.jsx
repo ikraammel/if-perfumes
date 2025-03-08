@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'; // Icônes œil pour afficher/masquer le mot de passe
-
+import './mediaqueries.css';
 // Composant Navbar (connexion/inscription)
 const AuthBar = ({ onLoginClick, onSignupClick }) => {
   return (

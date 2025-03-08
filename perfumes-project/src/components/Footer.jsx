@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './mediaqueries.css';
 const Footer = () => {
     return (
       <footer className="bg-pink-500 text-white py-8">

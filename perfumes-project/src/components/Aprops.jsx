@@ -1,4 +1,5 @@
 import React from 'react'
+import './mediaqueries.css';
 
 const Aprops = () => {
   return (

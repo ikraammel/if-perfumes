@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
+import "./mediaqueries.css";
 
 const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  // Fermer le menu lorsque l'utilisateur clique en dehors
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <div
       className="min-h-screen bg-cover bg-center"
@@ -13,29 +31,34 @@ const NavBar = () => {
             IF Perfumes
           </a>
 
-          {/* Menu à droite */}
-          <ul className="flex gap-7">
-            <div className="flex gap-6">
-              <a href="#accueil" className="hover:text-gray-200 flex items-center">
-                <i className="bx bxs-home mr-2"></i> Accueil
-              </a>
-              <a href="#apropos" className="hover:text-gray-200 flex items-center">
-                <i className="bx bxs-info-circle mr-2"></i> À propos
-              </a>
-              <a href="#parfums" id="openPopupBtn" className="hover:text-gray-200 flex items-center">
-                <i className="bx bxs-spray-can mr-2"></i> Parfums
-              </a>
-              
-            </div>
+          {/* Bouton du menu hamburger */}
+          <button
+            className="md:hidden text-2xl cursor-pointer"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <i className={`bx ${isMenuOpen ? "bx-x" : "bx-menu"}`}></i>
+          </button>
 
-            <div className="flex gap-4">
-              <a href="#login" className="hover:text-gray-200 flex items-center">
-                <i className="bx bxs-user mr-2"></i> Connexion
-              </a>
-              <a href="#signup" className="bg-white text-pink-500 px-4 py-2 rounded-lg hover:bg-gray-200 flex items-center">
-                <i className="bx bxs-user-plus mr-2"></i> Inscription
-              </a>
-            </div>
+          {/* Menu à droite */}
+          <ul
+            ref={menuRef}
+            className={`md:flex gap-7 ${isMenuOpen ? "flex flex-col gap-4 absolute top-16 right-4 bg-white p-4 rounded-lg shadow-lg" : "hidden"}`}
+          >
+            <a href="#accueil" className="flex items-center cursor-pointer">
+              <i className="bx bxs-home mr-2"></i> Accueil
+            </a>
+            <a href="#apropos" className="flex items-center cursor-pointer">
+              <i className="bx bxs-info-circle mr-2"></i> À propos
+            </a>
+            <a href="#parfums" id="openPopupBtn" className="flex items-center cursor-pointer">
+              <i className="bx bxs-spray-can mr-2"></i> Parfums
+            </a>
+            <a href="#login" className="flex items-center cursor-pointer">
+              <i className="bx bxs-user mr-2"></i> Connexion
+            </a>
+            <a href="#signup" className="bg-white text-pink-500 px-4 py-2 rounded-lg flex items-center cursor-pointer">
+              <i className="bx bxs-user-plus mr-2"></i> Inscription
+            </a>
           </ul>
         </div>
       </nav>

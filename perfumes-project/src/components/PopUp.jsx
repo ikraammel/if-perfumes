@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-
+import './mediaqueries.css';
 const OpenPopupButton = () => {
 
   // Fonction qui ouvre la fenêtre popup

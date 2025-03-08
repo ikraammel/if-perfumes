@@ -1,0 +1,313 @@
+/* Aprops */
+
+/* Styles de base */
+.about-container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+  
+  /* Pour les écrans de petite taille (smartphones) */
+  @media (max-width: 640px) {
+    .about-container {
+      padding: 0.5rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 0.875rem;
+    }
+  }
+  
+  /* Pour les écrans de taille moyenne (tablettes) */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .about-container {
+      padding: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Pour les écrans de grande taille (desktops) */
+  @media (min-width: 1025px) {
+    .about-container {
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.125rem;
+    }
+  }
+  
+  /* NavBar */
+
+/* Pour les écrans de petite taille (smartphones) */
+@media (max-width: 768px) {
+  /* Masquer le menu par défaut */
+  ul.flex {
+    display: none;
+  }
+
+  /* Afficher le menu en colonne lorsque isMenuOpen est true */
+  ul.flex.flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espace entre les éléments */
+    background-color: rgba(255, 255, 255, 0.95); /* Fond semi-transparent */
+    padding: 1rem;
+    position: absolute;
+    top: 60px; /* Ajustez en fonction de la hauteur de votre barre de navigation */
+    right: 1rem;
+    width: 200px; /* Largeur du menu */
+    z-index: 1000;
+    border-radius: 0.5rem; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  }
+
+  /* Style des liens dans le menu déroulant */
+  ul.flex.flex-col a {
+    color: #333; /* Couleur du texte */
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd; /* Ligne de séparation */
+  }
+
+  /* Bouton d'inscription dans le menu déroulant */
+  ul.flex.flex-col a.bg-white {
+    background-color: #fff;
+    color: #e91e63;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+  }
+}
+
+/* Pour les écrans de taille moyenne et grande (tablettes et desktops) */
+@media (min-width: 769px) {
+  /* Masquer le bouton du menu hamburger */
+  button.md\:hidden {
+    display: none;
+  }
+
+  /* Afficher le menu horizontalement */
+  ul.flex {
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+
+/* mediaqueries.css */
+
+/* Effet hover pour les liens */
+a:hover {
+  color: #e5e7eb; /* Couleur gris clair */
+  transition: color 0.3s ease; /* Transition fluide */
+}
+
+/* Effet hover pour le bouton d'inscription */
+a.bg-white:hover {
+  background-color: #e5e7eb; /* Fond gris clair */
+  color: #db2777; /* Couleur rose foncé */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transition fluide */
+}
+
+/* Effet hover pour le bouton du menu hamburger */
+button:hover {
+  color: #e5e7eb; /* Couleur gris clair */
+  transition: color 0.3s ease; /* Transition fluide */
+}
+/*footer*/
+@media screen and (max-width: 768px) {
+  footer .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  footer .container div {
+    margin-bottom: 20px;
+  }
+
+  footer iframe {
+    width: 100%;
+    height: 150px;
+  }
+
+  footer input {
+    width: 100%;
+  }
+
+  footer button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  footer {
+    padding: 20px;
+  }
+
+  footer h3 {
+    font-size: 1.2rem;
+  }
+
+  footer p, footer a {
+    font-size: 0.9rem;
+  }
+
+  footer .text-2xl {
+    font-size: 1.5rem;
+  }
+}
+/*parfums*/
+@media screen and (max-width: 1024px) {
+  .parfums-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .parfums-slider {
+    width: 100%;
+  }
+
+  .parfums-slider img {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .parfums-slider img {
+    max-width: 90%;
+  }
+
+  .parfums-slider div {
+    text-align: center;
+  }
+
+  .parfums-slider h2 {
+    font-size: 1.2rem;
+  }
+
+  .parfums-slider p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .parfums-slider {
+    flex-direction: column;
+  }
+
+  .parfums-slider img {
+    max-width: 100%;
+  }
+
+  .parfums-slider div {
+    width: 100%;
+  }
+
+  .parfums-slider h2 {
+    font-size: 1rem;
+  }
+
+  .parfums-slider p {
+    font-size: 0.8rem;
+  }
+
+  .parfums-buttons button {
+    padding: 8px;
+  }
+}
+/*popUp*/
+@media screen and (max-width: 768px) {
+  .fixed.bottom-4.right-4 {
+    bottom: 2rem; /* Ajuste la position */
+    right: 2rem;
+  }
+
+  .fixed.bottom-4.right-4 button {
+    padding: 12px; /* Réduit la taille du bouton */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .fixed.bottom-4.right-4 {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .fixed.bottom-4.right-4 button {
+    padding: 10px;
+    font-size: 14px; /* Réduit la taille de l'icône */
+  }
+}
+/*popup contact*/
+/* Pour tablettes et petits écrans */
+@media screen and (max-width: 768px) {
+  .fixed.bottom-4.left-4 {
+    bottom: 2rem; /* Ajuste la position du bouton */
+    left: 2rem;
+  }
+
+  .fixed.bottom-4.left-4 button {
+    width: 50px;
+    height: 50px; /* Réduit la taille du bouton */
+    font-size: 18px;
+  }
+
+  .w-\[600px\] {
+    width: 90% !important; /* Réduit la largeur de la popup */
+    padding: 20px !important; /* Ajuste l'espacement */
+  }
+
+  .text-3xl {
+    font-size: 1.8rem; /* Réduit la taille du titre */
+  }
+
+  .text-lg {
+    font-size: 1rem; /* Ajuste la taille des labels */
+  }
+
+  textarea {
+    height: 120px; /* Réduit la hauteur du champ message */
+  }
+}
+
+/* Pour mobiles */
+@media screen and (max-width: 480px) {
+  .fixed.bottom-4.left-4 {
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .fixed.bottom-4.left-4 button {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .w-\[600px\] {
+    width: 95% !important;
+    padding: 15px !important;
+  }
+
+  .text-3xl {
+    font-size: 1.5rem;
+  }
+
+  .text-lg {
+    font-size: 0.9rem;
+  }
+
+  textarea {
+    height: 100px;
+  }
+}
+/*pop up inscription*/
+

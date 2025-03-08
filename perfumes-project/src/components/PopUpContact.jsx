@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faTimes } from "@fortawesome/free-solid-svg-icons";
-
+import './mediaqueries.css';
 const ContactPopup = () => {
   // States
   const [isOpen, setIsOpen] = useState(false);
