@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faTimes } from "@fortawesome/free-solid-svg-icons";
-import './mediaqueries.css';
+import "../mediaqueries.css";
+import Details from "./Details";
 const ContactPopup = () => {
   // States
   const [isOpen, setIsOpen] = useState(false);
@@ -75,43 +76,24 @@ const ContactPopup = () => {
               </div>
             ) : (
               <form onSubmit={onSubmit} className="space-y-6">
-                {/* Nom */}
-                <div>
-                  <label className="block text-gray-700 text-lg mb-2">Nom</label>
-                  <input
-                    name="name"
-                    type="text"
-                    placeholder="Votre nom"
-                    required
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
-                  />
-                </div>
-
-                {/* Email */}
-                <div>
-                  <label className="block text-gray-700 text-lg mb-2">Email</label>
-                  <input
-                    name="email"
-                    type="email"
-                    placeholder="Votre email"
-                    required
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
-                  />
-                </div>
-
-                {/* Message */}
-                <div>
-                  <label className="block text-gray-700 text-lg mb-2">Message</label>
-                  <textarea
-                    name="message"
-                    placeholder="Votre message"
-                    required
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
-                    rows="6"
-                  ></textarea>
-                </div>
-
-                {/* Bouton Envoyer */}
+                <Details
+                  element="Nom"
+                  name="name"
+                  type="text"
+                  placeholder="Votre nom"
+                />
+                <Details
+                  element="Email"
+                  name="email"
+                  type="email"
+                  placeholder="Votre email"
+                />
+                <Details
+                  element="Message"
+                  name="message"
+                  type="message"
+                  placeholder="Votre message"
+                />
                 <button
                   type="submit"
                   className="w-full bg-pink-500 text-white py-3 rounded-lg text-lg font-semibold hover:bg-pink-600 cursor-pointer"
